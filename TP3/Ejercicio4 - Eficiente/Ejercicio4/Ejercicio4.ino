@@ -15,6 +15,7 @@ SemaphoreHandle_t s_tarea3;
 
 static int sc_tarea2 = 0; //hasta 2
 static int sc_tarea3 = 0; //hasta 3
+
 // -------------------------- FUNCIONES ---------------------------------- //
 
 
@@ -78,14 +79,8 @@ void tarea3(int i){
 // ------------------------ SETUP ----------------------------------------- //
 void setup(){
     Serial.begin(115200);
-    Serial.println("Ingrese secuencia (a - b - c): ");
-
-    /*while(!input){
-        while(!Serial.available());
-        char input = Serial.read(); //leo lo que se ingresa desde teclado
-    }*/
-    delay(1000);
-    input = 'c';
+    
+    input = 'a';
 
     s_tarea1 = xSemaphoreCreateBinary();
     s_tarea2 = xSemaphoreCreateBinary();
@@ -105,7 +100,7 @@ void setup(){
 
     vTaskStartScheduler();
 
-
+    
 }
 
 
