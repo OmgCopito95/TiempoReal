@@ -1,0 +1,57 @@
+     1: // --chip=16F877
+     2: 
+     3: #include <htc.h>
+     4: 
+     5: #define _XTAL_FREQ 1000000      
+     6: 
+     7: #define LE_LO 6
+     8: #define LE_HI 7
+     9: 
+    10: static volatile unsigned short valor;
+    11: 
+    12: static void mostrar_numero(unsigned short n){
+    13:         PORTB = n;
+    14:         RD6 = 1;
+    15:         RD6 = 0;
+    16:         PORTB = n >> 8;
+    17:         RD7 = 1;
+    18:         RD7 = 0;
+    19: 
+    20:         /*PORTD = (1 << LE_LO); // corrimiento del 1 LE_LO bits para la izq
+    21:         PORTB = 0b11111111 & n; 
+    22:         __delay_us(20);
+    23:         PORTD = (1 << LE_HI); // corrimiento del 1 LE_HI bits para la izq
+    24:         PORTB = n >> 8; // 8 bits para la derecha al numero 
+    25:         __delay_us(20);*/
+    26: }
+    27: 
+    28: void main(){
+    29:         
+    30:         // registro de control 0, configura la operacion del modulo A/D
+    31:         ADCON1 = 0b10001110; // ADCS1:ADCS0=0 (OSC/8), CHS2:CHS0=0 (canal 0), GO=0, ADON=1 (activa modulo)
+    32:         
+    33:         // registro de control 1, configura la funcion de los pines del puerto
+    34:         ADCON0 = 0b01000001; // ADFM=1 (ADRESH:ADRESL 2:8 bit), xxx, PCFG3:PCFG0 =14 (AN0 con VDD)
+    35:         
+    36:         ADIE = 0; // sin interrupciones
+    37: 
+    38:         // si se configura en ADCON0 con el pin RA0 y RA3 este tiene que ser de entrada 
+    39:         TRISA = TRISA | 1; // AN0 entrada
+    40: 
+    41:         // puerto D y B como salidas
+    42:         TRISD = 0x00;
+    43:         TRISB = 0x00;
+    44: 
+    45:         while (1){
+    46:         GO = 1; // inicia la conversion 
+    47:         //__delay_us(20);
+    48:                 while (GO){}
+    49:                 valor = ADRESH << 8 | ADRESL; // lee A/D asumiendo formato ADRES 2:8
+    50:                 //mostrar_numero(valor);
+    51:                 /*ADCON = ADCON | 0b00000100;
+    52:                 while (ADCON & 0b00000100){}
+    53:                 valor = ADRESH << 8 | ADRESL; // lee A/D asumiendo formato ADRES 2:8*/
+    54:                 mostrar_numero(valor);
+    55:                 //_delay(50000);
+    56:         }
+    57: }

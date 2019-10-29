@@ -1,0 +1,50 @@
+     1: // --chip=16f84a
+     2: 
+     3: #include <htc.h>
+     4: 
+     5: #define _XTAL_FREQ 1000000
+     6: 
+     7: 
+     8: void interrupt manejador(void){ //interrupcion
+     9:         PORTB =~ PORTB; // cambio el estado del puerto que tiene los leds
+    10:         TMR0 = 250; // tiempo que tarda en ejecutarse de nuevo la int
+    11:         T0IF=0; //si no limpio el flag no genera mas int de TMR0
+    12: }
+    13: 
+    14: 
+    15: 
+    16: void main(){
+    17: 
+    18: // registros de control de entrada/salida
+    19: TRISA = 0b11111111; //configuro  puerto A como entrada (1)
+    20: TRISB = 0b11001111; //configura los bits de los led como salida (0)
+    21: 
+    22: //manda un uno a los bit de los leds para que comiencen prendidos
+    23: RB4 = 1; 
+    24: RB5 = 1;
+    25: 
+    26: // ------------- CONFIGURO TIMER0 ------------------
+    27: 
+    28: //selecciona prescaler para TIMER0
+    29: PSA = 0; 
+    30: //prescaler divide por 256 => PS2:PS1:PS0=0b111
+    31: OPTION_REG = (OPTION_REG & 0b11111110) | 0b111; 
+    32: //Timer0 funciona como temporizador
+    33: T0CS = 0;
+    34: 
+    35: // ------------- FIN CONFIGURO TIMER0 ------------------
+    36: 
+    37: 
+    38: while (1){
+    39:         if ((RA0 == 0) || (RA1 == 0)){ 
+    40:                                         
+    41:                 //habilita la interrupcion general y de timer cuando se presionan los botones
+    42:                 // bit 7 en uno para habilitar las interrupciones
+    43:         // bit 5 en uno habilita interrupciones del timer0
+    44:                 INTCON=0b10100000;
+    45:         }
+    46: 
+    47: }
+    48: 
+    49: 
+    50: }

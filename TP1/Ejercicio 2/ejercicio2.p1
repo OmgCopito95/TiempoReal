@@ -1,0 +1,262 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"53 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INDF `Vuc 1 e@0 ]
+"57 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TMR0 `Vuc 1 e@1 ]
+"61 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PCL `Vuc 1 e@2 ]
+"65 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _STATUS `Vuc 1 e@3 ]
+"67 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _CARRY `Vb 1 e@24 ]
+"68 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _DC `Vb 1 e@25 ]
+"69 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _ZERO `Vb 1 e@26 ]
+"70 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _nPD `Vb 1 e@27 ]
+"71 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _nTO `Vb 1 e@28 ]
+"72 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _IRP `Vb 1 e@31 ]
+"73 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RP0 `Vb 1 e@29 ]
+"74 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RP1 `Vb 1 e@30 ]
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S2 . C DC Z nPD nTO RP IRP ]
+[s S3 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3 . . RP0 RP1 ]
+[u S1 `S2 1 `S3 1 ]
+[n S1 . . . ]
+"91 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _STATUSbits `VS1 1 e@3 ]
+"95 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _FSR `Vuc 1 e@4 ]
+"99 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PORTA `Vuc 1 e@5 ]
+"101 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RA0 `Vb 1 e@40 ]
+"102 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RA1 `Vb 1 e@41 ]
+"103 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RA2 `Vb 1 e@42 ]
+"104 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RA3 `Vb 1 e@43 ]
+"105 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RA4 `Vb 1 e@44 ]
+[s S5 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S5 . RA0 RA1 RA2 RA3 RA4 ]
+[u S4 `S5 1 ]
+[n S4 . . ]
+"115 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PORTAbits `VS4 1 e@5 ]
+"119 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PORTB `Vuc 1 e@6 ]
+"121 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB0 `Vb 1 e@48 ]
+"122 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB1 `Vb 1 e@49 ]
+"123 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB2 `Vb 1 e@50 ]
+"124 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB3 `Vb 1 e@51 ]
+"125 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB4 `Vb 1 e@52 ]
+"126 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB5 `Vb 1 e@53 ]
+"127 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB6 `Vb 1 e@54 ]
+"128 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RB7 `Vb 1 e@55 ]
+[s S7 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S7 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+[u S6 `S7 1 ]
+[n S6 . . ]
+"141 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PORTBbits `VS6 1 e@6 ]
+"145 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EEDATA `Vuc 1 e@8 ]
+"149 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EEADR `Vuc 1 e@9 ]
+"153 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PCLATH `Vuc 1 e@10 ]
+[s S9 :5 `uc 1 ]
+[n S9 . PCLATH ]
+[u S8 `S9 1 ]
+[n S8 . . ]
+"160 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PCLATHbits `VS8 1 e@10 ]
+"164 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INTCON `Vuc 1 e@11 ]
+"166 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RBIF `Vb 1 e@88 ]
+"167 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INTF `Vb 1 e@89 ]
+"168 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _T0IF `Vb 1 e@90 ]
+"169 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RBIE `Vb 1 e@91 ]
+"170 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INTE `Vb 1 e@92 ]
+"171 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _T0IE `Vb 1 e@93 ]
+"172 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EEIE `Vb 1 e@94 ]
+"173 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _GIE `Vb 1 e@95 ]
+"174 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TMR0IF `Vb 1 e@90 ]
+"175 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TMR0IE `Vb 1 e@93 ]
+[s S11 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S11 . RBIF INTF T0IF RBIE INTE T0IE EEIE GIE ]
+[s S12 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S12 . . TMR0IF . TMR0IE ]
+[u S10 `S11 1 `S12 1 ]
+[n S10 . . . ]
+"194 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INTCONbits `VS10 1 e@11 ]
+"203 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _OPTION_REG `Vuc 1 e@129 ]
+"205 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PSA `Vb 1 e@1035 ]
+"206 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _T0SE `Vb 1 e@1036 ]
+"207 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _T0CS `Vb 1 e@1037 ]
+"208 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _INTEDG `Vb 1 e@1038 ]
+"209 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _nRBPU `Vb 1 e@1039 ]
+"210 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PS0 `Vb 1 e@1032 ]
+"211 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PS1 `Vb 1 e@1033 ]
+"212 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _PS2 `Vb 1 e@1034 ]
+[s S14 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . PS PSA T0SE T0CS INTEDG nRBPU ]
+[s S15 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S15 . PS0 PS1 PS2 ]
+[u S13 `S14 1 `S15 1 ]
+[n S13 . . . ]
+"228 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _OPTION_REGbits `VS13 1 e@129 ]
+"232 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA `Vuc 1 e@133 ]
+"234 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA0 `Vb 1 e@1064 ]
+"235 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA1 `Vb 1 e@1065 ]
+"236 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA2 `Vb 1 e@1066 ]
+"237 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA3 `Vb 1 e@1067 ]
+"238 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISA4 `Vb 1 e@1068 ]
+[s S17 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S17 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 ]
+[u S16 `S17 1 ]
+[n S16 . . ]
+"248 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISAbits `VS16 1 e@133 ]
+"252 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB `Vuc 1 e@134 ]
+"254 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB0 `Vb 1 e@1072 ]
+"255 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB1 `Vb 1 e@1073 ]
+"256 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB2 `Vb 1 e@1074 ]
+"257 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB3 `Vb 1 e@1075 ]
+"258 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB4 `Vb 1 e@1076 ]
+"259 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB5 `Vb 1 e@1077 ]
+"260 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB6 `Vb 1 e@1078 ]
+"261 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISB7 `Vb 1 e@1079 ]
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+[u S18 `S19 1 ]
+[n S18 . . ]
+"274 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _TRISBbits `VS18 1 e@134 ]
+"278 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EECON1 `Vuc 1 e@136 ]
+"280 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _RD `Vb 1 e@1088 ]
+"281 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _WR `Vb 1 e@1089 ]
+"282 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _WREN `Vb 1 e@1090 ]
+"283 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _WRERR `Vb 1 e@1091 ]
+"284 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EEIF `Vb 1 e@1092 ]
+[s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S21 . RD WR WREN WRERR EEIF ]
+[u S20 `S21 1 ]
+[n S20 . . ]
+"294 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EECON1bits `VS20 1 e@136 ]
+"298 C:\PROGRA~2\HI-TEC~1\PICC\9.81\include\pic16f84a.h
+[v _EECON2 `Vuc 1 e@137 ]
+[p mainexit ]
+"8 ..\..\..\..\..\..\..\Users\july-\Desktop\Tiempo Real\TP1\Ejercicio 2\ejercicio2.c
+[v F251 `(v 1 tf ]
+[v _manejador `IF251 1 e ]
+{
+[e :U _manejador ]
+[f ]
+"9
+[e = _PORTB -> ~ -> _PORTB `i `uc ]
+"10
+[e = _TMR0 -> -> 250 `i `uc ]
+"11
+[e = _T0IF -> -> 0 `i `b ]
+"12
+[e :UE 22 ]
+}
+"16
+[v _main `(v 1 ef ]
+{
+[e :U _main ]
+[f ]
+"19
+[e = _TRISA -> -> 255 `i `uc ]
+"20
+[e = _TRISB -> -> 207 `i `uc ]
+"23
+[e = _RB4 -> -> 1 `i `b ]
+"24
+[e = _RB5 -> -> 1 `i `b ]
+"29
+[e = _PSA -> -> 0 `i `b ]
+"31
+[e = _OPTION_REG -> | & -> _OPTION_REG `i -> 254 `i -> 7 `i `uc ]
+"33
+[e = _T0CS -> -> 0 `i `b ]
+"38
+[e :U 25 ]
+{
+"39
+[e $ ! || == -> _RA0 `i -> 0 `i == -> _RA1 `i -> 0 `i 27  ]
+{
+"44
+[e = _INTCON -> -> 160 `i `uc ]
+"45
+}
+[e :U 27 ]
+"47
+}
+[e :U 24 ]
+"38
+[e $U 25  ]
+[e :U 26 ]
+"50
+[e :UE 23 ]
+}

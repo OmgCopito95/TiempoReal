@@ -1,0 +1,31 @@
+     1: // --chip=16f84a
+     2: 
+     3: #include <htc.h>
+     4: 
+     5: #define _XTAL_FREQ 1000000
+     6: 
+     7: void main(){
+     8: 
+     9:     // registros de control de entrada/salida
+    10:     TRISA = 0b11111111; //configuro  puerto A como entrada (1)
+    11:     TRISB = 0b11001111; //configura los bits de los led como salida (1)
+    12: 
+    13:     //manda un uno a los bit de los leds para que comiencen prendidos
+    14:     RB4 = 1; 
+    15:     RB5 = 1;
+    16: 
+    17:     while (1){
+    18:         // chequeo el estado de los botones. 
+    19:         // cuando presiono algun boton, recibe un cero.
+    20:         if ((RA0 == 0) || (RA1 == 0)){ 
+    21:             while(1){
+    22:                 // cambio el estado del puerto
+    23:                 PORTB = PORTB | 0b00110000; 
+    24:                 __delay_ms(250);
+    25:                 PORTB = PORTB & 0b11001111;
+    26:                 __delay_ms(250);
+    27:             }
+    28:         }
+    29:     }
+    30: 
+    31: }

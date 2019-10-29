@@ -1,0 +1,59 @@
+     1: #include <htc.h>
+     2: 
+     3: #define _XTAL_FREQ 1000000
+     4: #define LE_LO 6
+     5: #define LE_HI 7
+     6: 
+     7: static volatile unsigned short valor;
+     8: 
+     9: static unsigned short convertir(unsigned short n){
+    10: 
+    11:         unsigned long tmp = (unsigned long) n * 123;
+    12:         unsigned short res = (tmp) / 25;
+    13:         return (res > 5000) ? 5000 : res;
+    14: }
+    15: 
+    16: static void mostrarNumero(unsigned short n){
+    17:         
+    18:         unsigned char l, h;
+    19:         l = n % 10;
+    20:         n /= 10;        
+    21:         h = n % 10;
+    22:         PORTD = (1 << LE_LO);
+    23:         PORTB = h << 4 | l;
+    24:         __delay_us(100);
+    25: 
+    26:         n /= 10;        
+    27:         l = n % 10;
+    28:         n /= 10;        
+    29:         h = n % 10;
+    30:         PORTD = (1 << LE_HI);
+    31:         PORTB = h << 4 | l;
+    32:         __delay_us(100);
+    33: }
+    34: 
+    35: void main(){
+    36: 
+    37:         ADCON1 = 0b10000101;
+    38:         ADCON0 = 0b10000001;
+    39: 
+    40:         TRISA = 0b001001;
+    41:         TRISD = 0x00;
+    42:         TRISB = 0x00;
+    43:         
+    44:         ADIF = 0; // dice que termina la conversion 
+    45:         ADIE = 1; // habilita la int cuando termina la conversion 
+    46:         PEIE = 1; // interrupciones de perifericos
+    47:         GIE = 1; // interrupciones generales
+    48: 
+    49:         GO = 1; // conversion
+    50:         while (1);
+    51: }
+    52: 
+    53: void interrupt timerHandler(){
+    54: 
+    55:         valor = (ADRESH << 8) | ADRESL;
+    56:         //mostrarNumero(valor);
+    57:         mostrarNumero(convertir(valor));
+    58:         GO = 1;
+    59: }
