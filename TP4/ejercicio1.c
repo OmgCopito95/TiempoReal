@@ -8,7 +8,7 @@
 #define ITERACIONES 1000 // cantidad de veces que se ejecutan
 
 #define FREQ 100
-// 1000000000L = 1 segundo
+// 1000000000L = 1 segundo en nanosegundo
 #define PERIODO (1000000000L / FREQ) // centesima de segundo
 
 long long promedios[N]; // array para guardar los promedios de cada hilo
