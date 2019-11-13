@@ -1,0 +1,5 @@
+Compilar  y ejecutar:
+
+1) se guarda como thread1.c
+2) $ gcc thread1.c -o thread1 –lpthread
+3) $ ./thread1
