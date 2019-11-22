@@ -1,0 +1,25 @@
+Loop
+espera_interrupción;
+	procedimiento_para_a;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_c;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_b;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_c;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_a;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_c;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_d;
+espera_interrupción;
+	procedimiento_para_c;
+	procedimiento_para_d;
+End loop;
